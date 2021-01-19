@@ -58,5 +58,17 @@
 
         </li>
     </ul>
+    <br>
+    <ul>
+        <li th:each="dto : ${ list }">
+           [[${ #numbers.formatInteger(dto.sno, 5) }]]
+        </li>
+    </ul>
+    <br>
+    <ul>
+        <li th:each="dto : ${ list }">
+            [[${ #numbers.formatInteger(dto.sno, 5) }]] - [[${ #temporals.format(dto.regTime, 'yyyy/MM/dd') }]]
+        </li>
+    </ul>
 </body>
 </html>
